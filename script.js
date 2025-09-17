@@ -1,46 +1,67 @@
-const item1 = document.getElementById('item1');
-const item2 = document.getElementById('item2');
-const item3 = document.getElementById('item3');
-const fig1 = document.getElementById('fig1');
-const fig2 = document.getElementById('fig2');
-const fig3 = document.getElementById('fig3');
+// Banner
+const bannerItems = [
+    document.getElementById('fig1'),
+    document.getElementById('fig2'),
+    document.getElementById('fig3')
+];
+const controls = [
+    document.getElementById('item1'),
+    document.getElementById('item2'),
+    document.getElementById('item3')
+];
+const darkColor = '#46683aff';
+let currentIndex = 0;
+let intervalId;
 
-function resetItemColors() {
-    item1.style.backgroundColor = '';
-    item2.style.backgroundColor = '';
-    item3.style.backgroundColor = '';
+function showItem(index) {
+    bannerItems.forEach((item, i) => {
+        if (i === index) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+
+    controls.forEach((control, i) => {
+        if (i === index) {
+            control.style.backgroundColor = darkColor;
+        } else {
+            control.style.backgroundColor = '';
+        }
+    });
 }
 
-const darkColor = '#46683aff';
+function nextItem() {
+    currentIndex = (currentIndex + 1) % bannerItems.length;
+    showItem(currentIndex);
+}
 
-item1.addEventListener('click', () => {
-    resetItemColors();
-    item1.style.backgroundColor = darkColor;
+function startAutoSlide() {
+    intervalId = setInterval(nextItem, 8000);
+}
+
+function stopAutoSlide() {
+    clearInterval(intervalId);
+}
+
+controls.forEach((control, index) => {
+    control.addEventListener('click', () => {
+        stopAutoSlide();
+        currentIndex = index;
+        showItem(currentIndex);
+        startAutoSlide();
+    });
 });
 
-item2.addEventListener('click', () => {
-    resetItemColors();
-    item2.style.backgroundColor = darkColor;
-});
+// Initialize banner
+showItem(currentIndex);
+startAutoSlide();
 
-item3.addEventListener('click', () => {
-    resetItemColors();
-    item3.style.backgroundColor = darkColor;
-});
-item1.addEventListener('click', () => {
-    fig1.style.display = 'block';
-    fig2.style.display = 'none';
-    fig3.style.display = 'none';
-});
 
-item2.addEventListener('click', () => {
-    fig1.style.display = 'none';
-    fig2.style.display = 'block';
-    fig3.style.display = 'none';
-});
+// Mobile menu
+const menuIcon = document.getElementById('menu-icon');
+const menuContainer = document.getElementById('menu-container');
 
-item3.addEventListener('click', () => {
-    fig1.style.display = 'none';
-    fig2.style.display = 'none';
-    fig3.style.display = 'block';
+menuIcon.addEventListener('click', () => {
+    menuContainer.classList.toggle('show');
 });

@@ -1,0 +1,65 @@
+#menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 125px;
+        left: 0;
+        background-color: white;
+        z-index: 1000;
+    }
+
+    .menu.show {
+        display: block;
+    }
+
+    .nav .menu ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav .menu ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .item .title {
+        font-size: 1.5rem;
+    }
+
+    .item .message {
+        width: 80%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .our p {
+        width: 80%;
+    }
+}
