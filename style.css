@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos para el contenedor de  contacto y redes */
+.info{
+    background-color: #131212;
+    color:  rgb(246, 255, 244);
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 7px;
+}
+.redes a{
+    color: rgb(246, 255, 244);
+    text-decoration: none;
+    background-color: rgb(41, 41, 41);
+    border-radius: 50%;
+   text-align: center;
+    width: 25px;
+    height: 25px;
+    line-height: 28px;
+
+}
+.redes a i{
+    padding: 5px;
+    
+   
+}
+.dtContactos{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.dtContactos button{
+    padding: 5px;
+    font-size: 10px;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid rgb(202, 245, 189);
+    background-color: #94C73E
+}
+
+/*navegacion del logo y menus de opciones   */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+   
+}
+.nav .logo{
+    
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.menu{
+    height: 100%;
+}
+.nav .menu ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+  
+
+}
+.nav .menu ul li:hover{
+    border-bottom:4px solid orange;
+
+}
+.nav .menu ul li{
+    
+    border-bottom:4px solid transparent;
+    
+}
+.nav .menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 5px;
+  
+}
+
+/*baner principal  */
+.banner{
+    background-color: #94C73E;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    position: relative;
+}
+.item{
+   text-align: center;
+    width: 100%;
+
+}
+.item .title{
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #a6d05e;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    
+}
+.item .title h1{
+    display: inline;
+    background-color: #94C73E;
+    padding: 10px;
+    margin: 10px;
+}
+.item .message{
+    color: white;
+    font-size: 15px;
+    margin: 0px auto;
+    margin-top: 20px;
+    width: 50%;
+}
+.item button{
+    padding: 12px 25px;
+    margin: 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(244, 173, 41);
+    color: rgb(15, 15, 15);
+    cursor: pointer;
+    border-bottom:3px solid rgb(206, 85, 10);
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+   position: absolute;
+    bottom: 5px;
+    left: 0px;
+    right: 0px;
+}
+.controls div{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; 
+    background-color: rgb(215, 253, 216);
+    cursor: pointer;
+
+}
+
+/* contenido our services  */
+.our{
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+
+}
+.cards{
+    display: flex;
+   flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 30px;
+    margin: 10px;
+    padding: 20px;
+}
+.card{
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card i{
+    font-size: 50px;
+    color: #94C73E;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    padding: 18px;
+    background-color: rgb(234, 236, 234);
+    border-radius: 50%;
+}
+.card h3{
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #3c3c3c;
+}
+.card p{
+    font-size: 10px;
+    color: #949494;
+}
+
+.our h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #3c3c3c;
+}
+.our h2 b{
+    color: #94C73E;
+}
+.our p{
+    font-size: 12px;
+    color: #949494;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
